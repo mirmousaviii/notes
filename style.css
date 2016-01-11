@@ -1,5 +1,5 @@
 body {
-    background-color: #fafbfd;
+    background-color: #0074D9;
     margin: 0px;
     padding: 0px;
     color: #444;
@@ -14,7 +14,7 @@ section {
 article {
     margin: 30px;
     padding-bottom: 30px;
-    border-bottom: 1px dashed #dadada;
+    border-bottom: 1px dashed #0074D9;
 }
 article:last-child {
     border-bottom: none;
@@ -35,13 +35,14 @@ a:hover {
 }
 .tag li {
     display: inline;
-    padding: 2px;
+    padding: 2px 4px;
     font-size: 10px;
+    color: #626262;
+    border: 1px solid #DDDDDD;
     border-radius: 3px;
-    border: 1px solid #AAAAAA;
-    background-color: #DDDDDD;
 }
 .tag li:hover {
-    background-color: #AAAAAA;
+    color: #0074D9;
+    border: 1px solid #0074D9;
     cursor: pointer;
 }
