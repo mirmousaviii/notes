@@ -2,4 +2,4 @@
 Web application for notes management
 
 ## Installation
-  $ bower install
+    bower install
