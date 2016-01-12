@@ -2,58 +2,35 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel='stylesheet' href='style.css'/>
+    <link rel='stylesheet' href='style/style.css'/>
+    <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/notes-controller.js" type="text/javascript"></script>
     <title>Notes</title>
 </head>
-<body>
+<body data-ng-app="app" data-ng-controller="notesCtrl">
+
 <section>
+    <!--
     <article>
         <h3>
             <a href="http://example.com/link/test1">Sample Subject</a>
         </h3>
         <p>Description, Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <ul class="tag">
+        <ul class="tags">
             <li>Tag1</li>
             <li>Keyword1</li>
             <li>Tag2</li>
             <li>Keyword2</li>
         </ul>
     </article>
-    <article>
+    -->
+    <article data-ng-repeat="note in notes">
         <h3>
-            <a href="https://github.com/mirmousaviii/Persian-Calendar-for-Firefox">Persian Calendar for Firefox</a>
+            <a href="{{note.link}}">{{note.subject}}</a>
         </h3>
-        <p class="en">Firefox Extension for Shows Persian Date and Calendar (Jalali Caledar)</p>
-        <ul class="tag">
-            <li>Firefox</li>
-            <li>Jalali</li>
-            <li>Persian</li>
-            <li>Calendar</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>
-            <a href="http://example.com/link/test1">Sample Subject</a>
-        </h3>
-        <p class="en">Description, Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <ul class="tag">
-            <li>Tag1</li>
-            <li>Keyword1</li>
-            <li>Tag2</li>
-            <li>Keyword2</li>
-        </ul>
-    </article>
-    <article>
-        <h3>
-            <a href="https://github.com/mirmousaviii/Persian-Calendar-for-Firefox">Persian Calendar for Firefox</a>
-        </h3>
-        <p class="en">Firefox Extension for Shows Persian Date and Calendar (Jalali Caledar)</p>
-        <ul class="tag">
-            <li>Firefox</li>
-            <li>Jalali</li>
-            <li>Persian</li>
-            <li>Calendar</li>
+        <p>{{note.description}}</p>
+        <ul class="tags">
+            <li data-ng-repeat="tag in note.tags">{{ tag }}</li>
         </ul>
     </article>
 </section>

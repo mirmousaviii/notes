@@ -28,20 +28,22 @@ a:hover {
     color: #0074D9  ;
 }
 
-.tag {
+.tags {
     list-style: none;
+    margin: 10px 0 0 0;
     padding: 0;
     text-align: right;
 }
-.tag li {
+.tags li {
     display: inline;
+    margin-left: 5px;
     padding: 2px 4px;
     font-size: 10px;
     color: #626262;
     border: 1px solid #DDDDDD;
     border-radius: 3px;
 }
-.tag li:hover {
+.tags li:hover {
     color: #0074D9;
     border: 1px solid #0074D9;
     cursor: pointer;
