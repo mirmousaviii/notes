@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
     <!--Load normalize-->
-    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 
-    <!--Load template style-->
-    <!--<link rel='stylesheet' href='style/milligram/style.css'/>-->
-    <link rel='stylesheet' href='style/milligram-customize/milligram.min.css'/>
+    <!--Load template style (milligram and milligram-customize)-->
+    <link rel="stylesheet' href='style/milligram/style.css"/>
+    <!--<link rel="stylesheet' href='style/milligram-customize/milligram.min.css"/>-->
 
     <title>Notes</title>
 </head>
@@ -29,7 +29,7 @@
     <!--Header row-->
     <div class="row search">
         <div class="column">
-            <input type="search" ng-model="searchValue" placeholder="Search in Notes..."/>
+            <input type="search" data-ng-model="searchValue" placeholder="Search in Notes..."/>
         </div>
     </div>
 
@@ -38,12 +38,12 @@
         <div class="column">
             <div class="note" data-ng-repeat="note in filteredNotes = (notes | filter:searchValue)">
                 <h5>
-                    <a href="{{note.link}}">{{note.subject}}</a>
+                    <a href="{{note.link}}" target="_blank">{{note.subject}}</a>
                 </h5>
 
                 <p>{{note.description}}</p>
                 <ul class="tags">
-                    <li data-ng-repeat="tag in note.tags">{{ tag }}</li>
+                    <li data-ng-repeat="tag in note.tags" data-ng-click="$parent.$parent.searchValue=tag">{{ tag }}</li>
                 </ul>
                 <div class="divider" data-ng-if="!$last"></div>
             </div>
