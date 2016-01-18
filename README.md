@@ -1,5 +1,5 @@
 # Notes
-Web application for notes management
+Web application for offline notes management
 
 ## Installation
     bower install
