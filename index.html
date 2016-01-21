@@ -5,11 +5,8 @@
 
     <link rel="shortcut icon" type="image/png" href="images/notes.32.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <!--Load normalize-->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <!--Load template style (milligram and milligram-customize)-->
-    <link rel="stylesheet" href="style/milligram/style.css"/>
-    <!--<link rel="stylesheet' href='style/milligram-customize/milligram.min.css"/>-->
+    <link rel="stylesheet" href="style/milligram-customize/dist/milligram.min.css"/>
 
     <title>Notes</title>
 </head>
@@ -30,6 +27,7 @@
         <div class="column">
             # <em>NOTES ABOUT SOFTWARE DEVELOPMENT</em>
             <input type="search" data-ng-model="searchValue" placeholder="Search in Notes..."/>
+            <a data-ng-click="searchValue = ''" data-ng-show="searchValue.length > 0" class="clearInput">X</a>
         </div>
     </div>
 
