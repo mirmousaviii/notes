@@ -707,3 +707,13 @@ body {
     transform: rotate(-25deg);
   }
 }
+.column {
+  min-width: 350px;
+}
+
+.clearInput {
+  position: absolute;
+  right: 5px;
+  top: 34px;
+  cursor: pointer;
+}
