@@ -1,4 +1,4 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngAnimate']);
 
 app.controller('notesCtrl', function ($scope, $http) {
 
@@ -13,3 +13,4 @@ app.controller('notesCtrl', function ($scope, $http) {
         //});
 
 });
+

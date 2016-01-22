@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="style/milligram-customize/dist/milligram.min.css"/>
+    <link rel="stylesheet" href="style/angular-animate/style.css"/>
 
     <title>Notes</title>
 </head>
@@ -34,7 +35,7 @@
     <!--Result row-->
     <div class="row main">
         <div class="column">
-            <div class="note" data-ng-repeat="note in filteredNotes = (notes | filter:searchValue)">
+            <div class="note fade" data-ng-repeat="note in filteredNotes = (notes | filter:searchValue)">
                 <h5>
                     <a href="{{note.link}}" target="_blank">{{note.subject}}</a>
                 </h5>
@@ -59,6 +60,7 @@
 </div>
 
 <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
 <script src="script/notes-controller.js" type="text/javascript"></script>
 
 </body>
