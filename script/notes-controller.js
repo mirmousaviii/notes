@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngAnimate']);
+var app = angular.module('app', ['angular-loading-bar', 'ngAnimate']);
 
 app.controller('notesCtrl', function ($scope, $http) {
 
@@ -14,3 +14,7 @@ app.controller('notesCtrl', function ($scope, $http) {
 
 });
 
+
+app.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = true;
+}]);
