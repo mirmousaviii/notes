@@ -40,7 +40,7 @@
         <div class="column">
             <div class="note hidden"
                  when-visible="animateNoteIn"
-                 when-not-="animateNoteOut"
+                 when-not-visible="animateNoteOut"
                  data-ng-repeat="note in filteredNotes = (notes | filter:searchValue)">
                 <h5>
                     <a href="{{note.link}}" target="_blank">{{note.subject}}</a>
