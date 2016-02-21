@@ -32,7 +32,9 @@
             <a data-ng-click="searchValue = ''"
                data-ng-show="searchValue.length > 0"
                class="clearInput">X</a>
-
+            <a data-ng-click="showTag = true"
+               data-ng-hide="searchValue.length > 0 || showTag == true"
+               class="clearInput">Show Tags</a>
         </div>
     </div>
 
