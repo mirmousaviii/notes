@@ -32,6 +32,15 @@
             <a data-ng-click="searchValue = ''"
                data-ng-show="searchValue.length > 0"
                class="clearInput">X</a>
+
+        </div>
+    </div>
+
+    <div class="row tags-list" data-ng-show="showTag == true">
+        <div class="column">
+            <ul class="tags">
+                <li data-ng-repeat="tag in tags"  data-ng-click="$parent.searchValue=tag; $parent.showTag = false">{{tag}}</li>
+            </ul>
         </div>
     </div>
 

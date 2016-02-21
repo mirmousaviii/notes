@@ -640,6 +640,17 @@ body {
   border-radius: 3px;
 }
 
+.tags-list {
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.tags-list .tags {
+  float: left;
+}
+
 .search .column {
   padding: 0;
 }
