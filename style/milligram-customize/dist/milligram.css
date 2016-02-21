@@ -647,6 +647,10 @@ body {
   margin-bottom: 10px;
 }
 
+.tags-list .tags {
+  float: left;
+}
+
 .tags-list .tags li {
   float: left;
 }
